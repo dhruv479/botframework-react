@@ -30,7 +30,7 @@ export default class BotFrameworkChatv4 extends React.Component<
       bubbleFromUserBackground: this.props.bubbleFromUserBackground,
       userAvatarInitials: this.props.userAvatarInitials,
       botAvatarInitials: this.props.botAvatarInitials,
-      messageActivityWordBreak: "break-all",
+      messageActivityWordBreak: "normal",
     };
     this.state = {
       directLine: new DirectLine({
