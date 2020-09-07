@@ -27,6 +27,8 @@ export interface IBotFrameworkChatv4WebPartProps {
   sendBoxBackground: string;
   sendBoxTextColor: string;
   botHeader: string;
+  headerColor: string;
+  headerBG: string;
 }
 
 export default class BotFrameworkChatv4WebPart extends BaseClientSideWebPart<
@@ -52,6 +54,8 @@ export default class BotFrameworkChatv4WebPart extends BaseClientSideWebPart<
         sendBoxTextColor: this.properties.sendBoxTextColor,
         context: this.context,
         botHeader: this.properties.botHeader,
+        headerBG: this.properties.headerBG,
+        headerColor: this.properties.headerColor,
       }
     );
 
@@ -88,6 +92,12 @@ export default class BotFrameworkChatv4WebPart extends BaseClientSideWebPart<
               groupFields: [
                 PropertyPaneTextField("botHeader", {
                   label: "Bot Header",
+                }),
+                PropertyPaneTextField("headerBG", {
+                  label: "Header Background",
+                }),
+                PropertyPaneTextField("headerColor", {
+                  label: "Text Color",
                 }),
               ],
             },

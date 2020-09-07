@@ -18,4 +18,6 @@ export interface IBotFrameworkChatv4Props {
   context: IWebPartContext;
   messageActivityWordBreak: string;
   botHeader: string;
+  headerBG: string;
+  headerColor: string;
 }

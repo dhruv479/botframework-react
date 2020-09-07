@@ -41,12 +41,25 @@ export default class BotFrameworkChatv4 extends React.Component<
   }
   public render(): React.ReactElement<IBotFrameworkChatv4Props> {
     return (
-      <div className={styles.botFrameworkChatv4} style={{ height: 600 }}>
-        <div className={styles.header}>{this.props.botHeader}</div>
-        <ReactWebChat
-          directLine={this.state.directLine}
-          styleOptions={this.state.styleSetOptions}
-        />
+      <div>
+        <div
+          className={styles.header}
+          style={{
+            backgroundColor: this.props.headerBG,
+            color: this.props.headerColor,
+          }}
+        >
+          {this.props.botHeader}
+        </div>
+        <div
+          className={styles.botFrameworkChatv4}
+          style={{ maxHeight: "550px", height: "550px" }}
+        >
+          <ReactWebChat
+            directLine={this.state.directLine}
+            styleOptions={this.state.styleSetOptions}
+          />
+        </div>
       </div>
     );
   }
